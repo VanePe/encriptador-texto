@@ -4,6 +4,7 @@
     --color-fondo: #E5E5E5;
     --color-azul-oscuro: #0A3871;
     --color-blanco: #FFFFFF;
+    --color-blanco-variado: #D8DFE8;
     --clor-gris-400: #495057;
     --color-gris-500: #343A40;
     --fuente-inter: "Inter", sans-serif;
@@ -12,7 +13,7 @@
 *{
     padding: 0;
     margin: 0;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 body{
@@ -33,12 +34,13 @@ body{
     width: 65%;
     height: 95vh;
     align-items: center;
-    gap: 2rem;
+    gap: 0.5rem;
 }
 
 .encriptar_imagen{
     width: 1.8rem;
     height: 2.8rem;
+    margin-right: 60rem;
 }
 
 .encriptar_input{
@@ -50,6 +52,7 @@ body{
     font-weight: 400;
     font-size: 2rem;
     border: none;
+    margin-top: 2rem;
 }
 
 .encriptar_input:focus{
@@ -67,15 +70,51 @@ body{
     font-weight: 400;
     font-size: 0.75rem;
     color: var(--clor-gris-400);
+    margin-top: 15rem;
+    margin-right: 29rem;
+}
+
+.encriptar_botones{
+    margin-right: 9.7rem;
+}
+
+.encriptar_botones_encriptar{
+    background-color: var(--color-azul-oscuro);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-blanco);
+    width: 16.5rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+}
+
+.encriptar_botones_desencriptar{
+    background-color: var(--color-blanco-variado);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-azul-oscuro);
+    width: 16.5rem;
+    height: 4rem;
+    border-radius: 1.5rem; 
+    border-color: var(--color-azul-oscuro);
 }
 
 .mostrar_texto{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 95vh;
+    width: 25rem;
     background-color: var(--color-blanco);
     border-radius: 2rem;
+}
+
+.mostrar_texto_muñeco{
+    width: 18.5rem;
+    height: 17.5rem;
 }
 
 .mostrar_texto_mensaje_negativa{
@@ -83,6 +122,9 @@ body{
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--color-gris-500);
+    margin-top: 2rem;
+    width: 18.5rem;
+    text-align: center;
 }
 
 .mostrar_texto_parrafo{
@@ -90,4 +132,23 @@ body{
     font-weight: 400;
     font-size: 1rem;
     color: var(--clor-gris-400);
+    margin-top: 1rem;
+    width: 18.5rem;
+    text-align: center;
 }
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-azul-oscuro);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-fondo);
+    margin-top: 2rem;
+    height: 3.5rem;
+}
+
