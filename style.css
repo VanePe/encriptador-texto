@@ -75,7 +75,9 @@ body{
 }
 
 .encriptar_botones{
-    margin-right: 9.7rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 9rem;
 }
 
 .encriptar_botones_encriptar{
