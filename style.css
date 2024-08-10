@@ -114,6 +114,30 @@ body{
     border-radius: 2rem;
 }
 
+.mostrar_texto_encriptado{
+    display: flex;
+    width: 22rem;;
+    height: 24rem;
+    background-color: var(--color-blanco);
+    font-family: var(--fuente-inter);
+    color: var(--color-azul-oscuro);
+    font-weight: 400;
+    font-size: 2rem;
+    border: none;
+    justify-content: start;
+    display: none;
+}
+
+.mostrar_texto_encriptado:focus{
+    outline: none;
+}
+
+.mostrar_texto_encriptado::placeholder{
+    font-family: var(--fuente-inter);
+    color: var(--color-azul-oscuro);
+    font-size: 2rem;
+}
+
 .mostrar_texto_muñeco{
     width: 18.5rem;
     height: 17.5rem;
@@ -137,6 +161,20 @@ body{
     margin-top: 1rem;
     width: 18.5rem;
     text-align: center;
+}
+
+.mostrar_texto_copiar{
+    background-color: var(--color-blanco-variado);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-azul-oscuro);
+    width: 16.5rem;
+    height: 4rem;
+    border-radius: 1.5rem; 
+    border-color: var(--color-azul-oscuro);
+    margin-top: 11rem;
+    display: none;
 }
 
 .footer{
