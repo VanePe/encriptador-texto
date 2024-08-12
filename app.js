@@ -11,7 +11,19 @@ function btnEncriptar() {
         enseñarTexto.value = textoEncriptado;
         textarea.value = ""; // Limpiar el textarea
     } else {
-        console.error("El textarea no se encontró o no tiene valor.");
+        alert("No ha ingresado un valor.");
+    }
+}
+
+//Función para llamar al botón de desencriptar
+function btnDesencriptar(){
+    if(textarea && textarea.value){
+        let texto = textarea.value.toLowerCase();
+        let textoEncriptado = desencriptar(texto);
+        enseñarTexto.value = textoEncriptado;
+        textarea.value = "";
+    }else{
+        alert("eNo ha ingresado un valor.");
     }
 }
 
@@ -41,4 +53,33 @@ function encriptar(textoEntrada) {
     }
 
     return encriptado;
+}
+
+
+//Función para desencriptar
+function desencriptar(textoEntrada){
+    let llaves = ["ai", "enter", "imes", "ober", "ufat"];
+    let desencriptado = textoEntrada;
+
+    for(let i = 0; i < llaves.length; i++){
+        switch (llaves[i]) {
+            case "ai":
+                desencriptado = desencriptado.replaceAll(llaves[i], "a");
+                break;
+            case "enter":
+                desencriptado = desencriptado.replaceAll(llaves[i], "e");
+                break;
+            case "imes":
+                desencriptado = desencriptado.replaceAll(llaves[i], "i");
+                break;
+            case "ober":
+                desencriptado = desencriptado.replaceAll(llaves[i], "o");
+                break;
+            case "ufat":
+                desencriptado = desencriptado.replaceAll(llaves[i], "u");
+                break;
+        }
+    }
+
+    return desencriptado;
 }
