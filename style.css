@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --color-fondo: #E5E5E5;
+    --color-azul-oscuro: #0A3871;
+    --color-blanco: #FFFFFF;
+    --color-blanco-variado: #D8DFE8;
+    --clor-gris-400: #495057;
+    --color-gris-500: #343A40;
+    --fuente-inter: "Inter", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    /*border: 1px solid red;*/
+}
+
+body{
+    background-color: var(--color-fondo);
+    box-sizing: content-box;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+
+.encriptar{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 95vh;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.encriptar_imagen{
+    width: 1.8rem;
+    height: 2.8rem;
+    margin-right: 60rem;
+}
+
+.encriptar_input{
+    width: 42.5rem;
+    height: 18rem;
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-inter);
+    color: var(--color-azul-oscuro);
+    font-weight: 400;
+    font-size: 2rem;
+    border: none;
+    margin-top: 2rem;
+}
+
+.encriptar_input:focus{
+    outline: none;
+}
+
+.encriptar_input::placeholder{
+    font-family: var(--fuente-inter);
+    color: var(--color-azul-oscuro);
+    font-size: 2rem;
+}
+
+.encriptar_informacion{
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--clor-gris-400);
+    margin-top: 15rem;
+    margin-right: 29rem;
+}
+
+.encriptar_botones{
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 9rem;
+}
+
+.encriptar_botones_encriptar{
+    background-color: var(--color-azul-oscuro);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-blanco);
+    width: 16.5rem;
+    height: 4rem;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    
+}
+
+.encriptar_botones_desencriptar{
+    background-color: var(--color-blanco-variado);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-azul-oscuro);
+    width: 16.5rem;
+    height: 4rem;
+    border: solid 1px var(--color-azul-oscuro);
+    border-radius: 1.5rem; 
+    border-color: var(--color-azul-oscuro);
+    cursor: pointer;
+}
+
+.mostrar_texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 25rem;
+    background-color: var(--color-blanco);
+    border-radius: 2rem;
+}
+
+.mostrar_texto_encriptado{
+    display: flex;
+    width: 22rem;;
+    height: 24rem;
+    background-color: var(--color-blanco);
+    font-family: var(--fuente-inter);
+    color: var(--color-azul-oscuro);
+    font-weight: 400;
+    font-size: 2rem;
+    border: none;
+    justify-content: start;
+    display: none;
+}
+
+.mostrar_texto_encriptado:focus{
+    outline: none;
+}
+
+.mostrar_texto_encriptado::placeholder{
+    font-family: var(--fuente-inter);
+    color: var(--color-azul-oscuro);
+    font-size: 2rem;
+}
+
+.mostrar_texto_muñeco{
+    width: 18.5rem;
+    height: 17.5rem;
+}
+
+.mostrar_texto_mensaje_negativa{
+    font-family: var(--fuente-inter);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-gris-500);
+    margin-top: 2rem;
+    width: 18.5rem;
+    text-align: center;
+}
+
+.mostrar_texto_parrafo{
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--clor-gris-400);
+    margin-top: 1rem;
+    width: 18.5rem;
+    text-align: center;
+}
+
+.mostrar_texto_copiar{
+    background-color: var(--color-blanco-variado);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-azul-oscuro);
+    width: 16.5rem;
+    height: 4rem;
+    border: solid 1px var(--color-azul-oscuro);
+    border-radius: 1.5rem; 
+    border-color: var(--color-azul-oscuro);
+    margin-top: 11rem;
+    display: none;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-azul-oscuro);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-fondo);
+    margin-top: 2rem;
+    height: 8vh;
+}
+
+
+
