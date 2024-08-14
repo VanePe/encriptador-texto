@@ -20,11 +20,11 @@
         </div>
 
         <div class="mostrar_texto">
-            <textarea name="" class="mostrar_texto_encriptado"></textarea>
-            <img src="./assets/Muñeco.png" alt="muñeco buscando" class="mostrar_texto_muñeco" >
-            <h2 class="mostrar_texto_mensaje_negativa" >Ningún mensaje fue encontrado</h2>
-            <p class="mostrar_texto_parrafo" >Ingresa el texto que desees encriptar o desencriptar.</p>   
-            <button class="mostrar_texto_copiar" onclick="" >Copiar</button>
+            <textarea id="textoProcesado" class="mostrar_texto_encriptado"></textarea>
+            <img src="./assets/Muñeco.png" alt="muñeco buscando" class="mostrar_texto_muñeco" id="muneco">
+            <h2 class="mostrar_texto_mensaje_negativa" id="mensajeNegativa">Ningún mensaje fue encontrado</h2>
+            <p class="mostrar_texto_parrafo" id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>   
+            <button id="botonCopiar" class="mostrar_texto_copiar" onclick="btnCopiar()" >Copiar</button>
         </div>
 
     </main>

@@ -1,15 +1,19 @@
 let textarea = document.getElementById('textoAEncriptar');
-let enseñarTexto = document.querySelector(".mostrar_texto_encriptado");
+let enseñarTexto = document.getElementById('textoProcesado');
 
 // Función para llamar al botón encriptar
 function btnEncriptar() {
 
-    console.log(textarea.value);
     if (textarea && textarea.value) {  // Asegúrate de que textarea exista y tenga un valor
         let texto = textarea.value.toLowerCase(); // Convertir el texto a minúsculas
         let textoEncriptado = encriptar(texto);
         enseñarTexto.value = textoEncriptado;
         textarea.value = ""; // Limpiar el textarea
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("mensajeNegativa").style.display = "none";
+        document.getElementById("parrafo").style.display = "none";
+        document.getElementById("textoProcesado").style.display = "block";
+        document.getElementById("botonCopiar").style.display = "block";
     } else {
         alert("No ha ingresado un valor.");
     }
@@ -23,35 +27,21 @@ function btnDesencriptar(){
         enseñarTexto.value = textoEncriptado;
         textarea.value = "";
     }else{
-        alert("eNo ha ingresado un valor.");
+        alert("No ha ingresado un valor.");
     }
 }
 
 // Función para encriptar
 function encriptar(textoEntrada) {
-    let vocales = ["a", "e", "i", "o", "u"];
+    let vocales = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     let encriptado = textoEntrada;
 
-    for (let i = 0; i < vocales.length; i++) {
-        switch (vocales[i]) {
-            case "a":
-                encriptado = encriptado.replaceAll(vocales[i], "ai");
-                break;
-            case "e":
-                encriptado = encriptado.replaceAll(vocales[i], "enter");
-                break;
-            case "i":
-                encriptado = encriptado.replaceAll(vocales[i], "imes");
-                break;
-            case "o":
-                encriptado = encriptado.replaceAll(vocales[i], "ober");
-                break;
-            case "u":
-                encriptado = encriptado.replaceAll(vocales[i], "ufat");
-                break;
+    for(let i = 0; i < vocales.length; i++){
+        if(encriptado.includes(vocales[i][0])){
+            encriptado = encriptado.replaceAll(vocales[i][0], vocales[i][1]);
         }
     }
-
+    
     return encriptado;
 }
 
@@ -82,4 +72,10 @@ function desencriptar(textoEntrada){
     }
 
     return desencriptado;
+}
+
+function btnCopiar(){
+    let texto = enseñarTexto.value;
+
+    navigator.clipboard.writeText(texto);
 }
