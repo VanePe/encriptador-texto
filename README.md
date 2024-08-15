@@ -15,4 +15,9 @@ Particar la lógica de programación por medio del reto
 - La letra "o" es convertida para "ober"
 - La letra "u" es convertida para "ufat"
 
+<h3>Aspectos a tener en cuenta</h3>
+
+- No es reponsive
+- No tiene validaciones 
+
 
